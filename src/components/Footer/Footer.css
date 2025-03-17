@@ -1,0 +1,17 @@
+.footer-text {
+  color: black;
+  font-family: 'Lato';
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  height: 80px;
+  background-color: rgb(248, 242, 235);
+  align-items: center;
+}
+
+.footer-arrow {
+  padding: 2%;
+  font-size: 28px;
+}
