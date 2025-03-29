@@ -3,6 +3,8 @@ import image1 from '../../assets/homepage/ian-picture1.jpg'; // Adjust the path 
 import './Home.css';
 import { Link } from 'react-router-dom';
 
+import { FadeInSection } from '../../components/FadeInSection/FadeInSection.tsx';
+
 const Home = () => {
   return (
     <div>
@@ -27,16 +29,22 @@ const Home = () => {
 
       <div style={section2style.container} className='section2'>
         {/* SECTION 2 MY TECHNOLOGIES USED */}
-        <div style={section2style.textContainer}>
-          <p style={section2style.smallHeading} className='section2Text'>( TECHNOLOGIES )</p>
-          <p style={section2style.mainText} className='section2Text'>
 
-          I AM CONSTANTLY LEARNING NEW THINGS AND EXPANDING MY TOOLKIT. I BUILD WITH TYPESCRIPT, REACT, NODE.JS,
-          CSS AND EXPRESS.JS, AND THREE.JS, BUT I LOVE KEEPING UP WITH WHAT IS NEW.  
+          <div style={section2style.textContainer}>
 
-          </p>
+            <p style={section2style.smallHeading} className='section2Text'>( TECHNOLOGIES )</p>
+
+            <FadeInSection>
+              <p style={section2style.mainText} className='section2Text'>
+
+            I AM CONSTANTLY LEARNING NEW THINGS AND EXPANDING MY TOOLKIT. I BUILD WITH TYPESCRIPT, REACT, NODE.JS,
+            CSS AND EXPRESS.JS, AND THREE.JS, BUT I LOVE KEEPING UP WITH WHAT IS NEW.  
+
+              </p>
+            </FadeInSection>
+          </div>
+
         </div>
-      </div>
     </div>
     
   );
