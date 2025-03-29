@@ -1,12 +1,13 @@
 //import React from 'react';
 import image1 from '../../assets/homepage/ian-picture1.jpg'; // Adjust the path to your image
 import './Home.css';
+import { Link } from 'react-router-dom';
 
 const Home = () => {
   return (
     <div>
       <div style={styles.container}>
-        {/* landing page */}
+        {/* SECTION 1 */}
         <div style={styles.textContainer}>
           <h1 style={styles.heading} className="home-text">&lt;HEY!/&gt;</h1>
           <p style={styles.paragraph} className="home-text">
@@ -15,6 +16,7 @@ const Home = () => {
           <p style={styles.paragraph} className="home-text">
             I'm glad that you're here, feel free to take a look!
           </p>
+
          </div>
 
         <div style={styles.imageContainer}>
@@ -22,25 +24,23 @@ const Home = () => {
         </div>
       </div>
 
-    
+
       <div style={section2style.container} className='section2'>
-        {/* */}
-        <p style={styles.paragraph} className='home-text'>hi</p>
+        {/* SECTION 2 MY TECHNOLOGIES USED */}
+        <div style={section2style.textContainer}>
+          <p style={section2style.smallHeading} className='section2Text'>( TECHNOLOGIES )</p>
+          <p style={section2style.mainText} className='section2Text'>
+
+          I AM CONSTANTLY LEARNING NEW THINGS AND EXPANDING MY TOOLKIT. I BUILD WITH TYPESCRIPT, REACT, NODE.JS,
+          CSS AND EXPRESS.JS, AND THREE.JS, BUT I LOVE KEEPING UP WITH WHAT IS NEW.  
+
+          </p>
+        </div>
       </div>
     </div>
     
   );
 };
-
-const section2style = {
-  container: {
-    display: 'flex',
-    justifyContent: 'space-between',
-    alignItems: 'center',
-    padding: '150px',
-    margin: '0 0 0 0', 
-  },
-}
 
 const styles = {
   container: {
@@ -79,5 +79,30 @@ const styles = {
     borderRadius: '8px',
   },
 };
+
+const section2style = {
+  container: {
+    display: 'flex',
+    justifyContent: 'center',
+    padding: '150px',
+    margin: '0 0 0 0', 
+    border: '1px solid white'
+  },
+  smallHeading: {
+    color: 'white',
+    textAlign: 'center',
+    marginBottom: '32px',
+  },
+  textContainer: {
+    height: 'fit-content',
+    width: '80%',
+  },
+  mainText: {
+    textAlign: 'center',
+    fontSize: '32px',
+    color: 'white',
+  }
+}
+
 
 export default Home;
