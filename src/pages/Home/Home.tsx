@@ -2,6 +2,8 @@
 import image1 from '../../assets/homepage/ian-picture1.jpg'; // Adjust the path to your image
 import './Home.css';
 
+import Project from '../../components/Project/Project';
+
 const Home = () => {
   return (
     <div>
@@ -24,8 +26,9 @@ const Home = () => {
 
     
       <div style={section2style.container} className='section2'>
-        {/* */}
-        <p style={styles.paragraph} className='home-text'>hi</p>
+        {/* adding my projects into the site */}
+        <p style={styles.paragraph} className='home-text'></p>
+        <Project/>
       </div>
     </div>
     
