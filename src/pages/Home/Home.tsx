@@ -7,7 +7,12 @@ import { FadeInSection } from '../../components/FadeInSection/FadeInSection.tsx'
 
 import Project from '../../components/Project/Project';
 
+import { projectsData } from '../../data/projects.js';
+
 const Home = () => {
+
+  console.log(projectsData);
+
   return (
     <div>
       <div style={styles.container}>
@@ -30,30 +35,90 @@ const Home = () => {
 
 
       <div style={section2style.container} className='section2'>
-        {/* adding my projects into the site */}
-        <p style={styles.paragraph} className='home-text'></p>
-        <Project></Project>
-      </div>
         {/* SECTION 2 MY TECHNOLOGIES USED */}
+        <div style={section2style.textContainer}>
 
-          <div style={section2style.textContainer}>
-
+          <FadeInSection>
             <p style={section2style.smallHeading} className='section2Text'>( TECHNOLOGIES )</p>
+          </FadeInSection>
 
-            <FadeInSection>
-              <p style={section2style.mainText} className='section2Text'>
+          <FadeInSection>
+            <p style={section2style.mainText} className='section2Text'>
 
-            I AM CONSTANTLY LEARNING NEW THINGS AND EXPANDING MY TOOLKIT. I BUILD WITH TYPESCRIPT, REACT, NODE.JS,
-            CSS AND EXPRESS.JS, AND THREE.JS, BUT I LOVE KEEPING UP WITH WHAT IS NEW.  
+          I AM CONSTANTLY LEARNING NEW THINGS AND EXPANDING MY TOOLKIT. I BUILD WITH TYPESCRIPT, REACT, NODE.JS,
+          CSS AND EXPRESS.JS, AND THREE.JS, BUT I LOVE KEEPING UP WITH WHAT IS NEW.  
 
-              </p>
-            </FadeInSection>
+            </p>
+          </FadeInSection>
+
+        </div>
+
+        <div style={section2style.projectContainer}>
+
+          {/* adding my projects into the site */}
+          <FadeInSection>
+            <p style={section2style.smallHeading} className='section2Text'>( PROJECTS )</p>
+          </FadeInSection>
+
+          <div style={section2style.projectList}>
+            {projectsData.map((project) => (
+              <FadeInSection key={project.id}>
+                <Project
+                  title={project.title}
+                  description={project.description}
+                  technologies={project.technologies}
+                  imageUrl={project.imageUrl}
+                />
+              </FadeInSection>
+            ))}
           </div>
+
+        </div>
+
+      </div>
 
     </div>
     
   );
 };
+
+const section2style = {
+  container: {
+    display: 'block',
+    padding: '150px',
+    margin: '0 0 0 0', 
+    height: 'fit-content',
+  },
+  smallHeading: {
+    color: 'white',
+    textAlign: 'center',
+    marginBottom: '32px',
+  },
+  textContainer: {
+    height: 'fit-content',
+    width: '80%',
+    marginLeft: 'auto',
+    marginRight: 'auto',
+  },
+  mainText: {
+    textAlign: 'center',
+    fontSize: '32px',
+    color: 'white',
+  },
+  projectContainer: {
+    marginTop: '5%',
+    marginLeft: 'auto',
+    marginRight: 'auto',
+    width: '100%',
+  },
+  projectList: {
+    width: '100%',
+    display: 'grid',
+    gridTemplateColumns: 'repeat(auto-fit, 300px)',
+    gap: '20px',
+    justifyContent: 'center',
+  },
+}
 
 const styles = {
   container: {
@@ -93,28 +158,5 @@ const styles = {
   },
 };
 
-const section2style = {
-  container: {
-    display: 'flex',
-    justifyContent: 'center',
-    padding: '150px',
-    margin: '0 0 0 0', 
-    border: '1px solid white'
-  },
-  smallHeading: {
-    color: 'white',
-    textAlign: 'center',
-    marginBottom: '32px',
-  },
-  textContainer: {
-    height: 'fit-content',
-    width: '80%',
-  },
-  mainText: {
-    textAlign: 'center',
-    fontSize: '32px',
-    color: 'white',
-  }
-}
 
 export default Home;
