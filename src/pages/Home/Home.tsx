@@ -32,7 +32,7 @@ const Home = () => {
       <div style={section2style.container} className='section2'>
         {/* adding my projects into the site */}
         <p style={styles.paragraph} className='home-text'></p>
-        <Project/>
+        <Project></Project>
       </div>
         {/* SECTION 2 MY TECHNOLOGIES USED */}
 
@@ -50,7 +50,6 @@ const Home = () => {
             </FadeInSection>
           </div>
 
-        </div>
     </div>
     
   );
