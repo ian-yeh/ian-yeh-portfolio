@@ -1,4 +1,4 @@
-import ianFaceImg from '../assets/homepage/ian-picture1.JPG';
+import ianFaceImg from '../assets/homepage/lebron-james.jpg';
 
 export const projectsData = [
   {
