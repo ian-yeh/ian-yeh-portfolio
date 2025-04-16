@@ -1,28 +1,63 @@
 // src/components/Header/Header.tsx
-
-//import React from 'react'; // Add this line
+import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import './Header.css';
+import styles from './Header.module.css';
 
 function Header() {
+  const [scrollPercentage, setScrollPercentage] = useState(0);
+  const [activeBar, setActiveBar] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollTop = window.scrollY || document.documentElement.scrollTop;
+      const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+      const scrolled = Math.ceil((scrollTop / scrollHeight) * 100);
+
+      setScrollPercentage(scrolled);
+
+      setActiveBar(scrollTop >= 830);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  console.log(activeBar);
+
   return (
-    <header className="header">
-      <div className="logo">
-        <Link className="header-text" to="/">&lt;IAN.YEH/&gt;</Link>
+    <header className={styles.header}>
+
+      <div 
+       className={styles.logo}
+      >
+        <Link className={`${{activeBar} ? styles.headerText : styles.headerText-active}`} to="/">
+          &lt;IAN.YEH/&gt;
+        </Link>
       </div>
-      <nav className="nav">
-        <ul>
-          <li>
-            <Link className="header-text" to="/">(HOME)</Link>
+
+      <nav className={styles.nav}>
+        <ul className={styles.navList}>
+          <li className={`${styles.navItem} ${styles.fadeUp1}`}>
+            <Link className={`${styles.headerText} ${styles.navLink}`} to="/">
+              (HOME)
+            </Link>
           </li>
-          <li>
-            <Link className="header-text" to="/about">(ABOUT)</Link>
+          <li className={`${styles.navItem} ${styles.fadeUp2}`}>
+            <Link className={`${styles.headerText} ${styles.navLink}`} to="/about">
+              (ABOUT)
+            </Link>
           </li>
-          <li>
-            <Link className="header-text" to="/contact">(CONTACT)</Link>
+          <li className={`${styles.navItem} ${styles.fadeUp3}`}>
+            <Link className={`${styles.headerText} ${styles.navLink}`} to="/contact">
+              (CONTACT)
+            </Link>
           </li>
         </ul>
       </nav>
+
+      {/* Scroll progress */}
+      <p className={styles.percentageDisplay}>{scrollPercentage}</p>
+
     </header>
   );
 }

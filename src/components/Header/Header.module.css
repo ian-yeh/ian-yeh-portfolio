@@ -1,0 +1,101 @@
+/* src/components/Header/Header.module.css */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: transparent;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.headerText-active {
+  color: black;
+}
+
+/* Text styles - applied to both logo and nav links */
+.headerText {
+  font-family: 'Lato', sans-serif;
+  font-weight: 300;
+  color: #ffffff;
+  text-decoration: none;
+  width: 50px;
+  font-size: 1rem;
+}
+
+/* Logo specific styles */
+.logo .headerText {
+  font-weight: 500;
+}
+
+/* Navigation link styles */
+.navList {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+  margin: 0;
+  padding: 0;
+}
+
+.navItem {
+  /* Animation styles remain here */
+}
+
+.navLink {
+  position: relative;
+}
+
+/* Hover effects */
+.navLink:hover {
+  color: #ffffff !important;
+}
+
+.navLink:hover::after {
+  transform: scaleX(1);
+}
+
+.navLink::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 1px;
+  bottom: 0;
+  left: 0;
+  background-color: #dddddd;
+  transition: transform 0.25s ease-out;
+  transform-origin: bottom left;
+}
+
+/* Animations */
+.fadeUp1 {
+  animation: fadeUp 0.5s forwards;
+}
+
+.fadeUp2 {
+  animation: fadeUp 0.7s forwards;
+}
+
+.fadeUp3 {
+  animation: fadeUp 0.9s forwards;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(5px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.percentageDisplay {
+  color: white;
+  border: 1px solid white;
+  width: 50px;
+  z-index: 1001;
+  transition: width 0.1s linear;
+}
