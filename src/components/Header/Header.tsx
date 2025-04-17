@@ -46,7 +46,7 @@ function Header() {
               className={`${styles.headerText} ${styles.navLink} ${activeBar ? styles.scrolled:styles.notScrolled}`} 
               to="/about"
             >
-              (ABOUT)
+              (ABOUT) 
             </Link>
           </li>
           <li className={`${styles.navItem} ${styles.fadeUp3}`}>
@@ -54,7 +54,7 @@ function Header() {
               className={`${styles.headerText} ${styles.navLink} ${activeBar ? styles.scrolled:styles.notScrolled}`} 
               to="/contact"
             >
-              (CONTACT)
+              (CONTACT) 
             </Link>
           </li>
         </ul>

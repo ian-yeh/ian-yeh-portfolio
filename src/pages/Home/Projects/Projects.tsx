@@ -7,8 +7,6 @@ import styles from './Projects.module.css';
 
 const Projects = () => {
 
-  console.log(projectsData);
-
   return (
     <div className={styles.projectContainer}>
 
@@ -25,6 +23,7 @@ const Projects = () => {
               description={project.description}
               technologies={project.technologies}
               imageUrl={project.imageUrl}
+              repository={project.repository}
             />
           </FadeInSection>
         ))}

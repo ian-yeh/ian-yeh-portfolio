@@ -5,7 +5,6 @@ import FrontPage from './FrontPage/FrontPage';
 import AboutSection from './AboutSection/AboutSection';
 import Projects from './Projects/Projects';
 
-
 const Home = () => {
 
   return (

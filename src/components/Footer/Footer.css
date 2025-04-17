@@ -4,14 +4,11 @@
 }
 
 .footer-container {
+  margin: 0 auto;
+  width: 1200px;
   display: flex;
   justify-content: space-between;
   height: 80px;
   background-color: white; 
   align-items: center;
-}
-
-.footer-arrow {
-  padding: 2%;
-  font-size: 16px;
 }

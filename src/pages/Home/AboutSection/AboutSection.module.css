@@ -48,6 +48,26 @@
 .skillsTitle {
   font-size: 1.2rem;
   font-weight: 700;
+  margin-bottom: 2%;
+}
+
+.skillsContainer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.skillsList {
+  width: 50%;
+  list-style: none;
+}
+
+.skillsIcons {
+  font-size: 14px;
+}
+
+li {
+  align-items: center;
+  display: flex;
 }
 
 ion-icon {
