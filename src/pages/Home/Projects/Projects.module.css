@@ -1,0 +1,14 @@
+.projectContainer {
+  margin-top: 4%;
+  margin-left: auto;
+  margin-right: auto;
+  width: 99%;
+}
+
+.projectList {
+  width: 99%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 599px);
+  gap: 19px;
+  justify-content: center;
+}

@@ -1,14 +1,13 @@
 /* FrontPage.module.css */
 * {
-  font-family: 'Lato', sans-serif;
+  font-family: 'Inter', sans-serif;
  }
 
 .container {
   display: flex;
-  justify-content: space-between;
   align-items: center;
   padding: 150px;
-  max-width: 1200px;
+  width: 1200px;
   margin: 0 auto;
   background-color: #ffffff;
 }
@@ -20,14 +19,15 @@
 
 .heading {
   font-size: 2.5rem;
+  font-weight: 500;
   margin-bottom: 20px;
   overflow: hidden; /* Ensures the content is not revealed until the animation */
   border-right: .15em solid orange; /* The typwriter cursor */
   white-space: nowrap; /* Keeps the content on a single line */
   margin: 0 auto; /* Gives that scrolling effect as the typing happens */
-  letter-spacing: .15em; /* Adjust as needed */
+  border-width: 4px;
   animation: 
-    typing 3.5s steps(40, end),
+    typing 2.5s steps(40, end),
     blink-caret .75s step-end infinite;
 }
 
@@ -35,6 +35,7 @@
   font-size: 1.1rem;
   line-height: 1.6;
   margin-bottom: 20px;
+  margin-top: 24px;
   animation: fade-up 0.9s;
 }
 
@@ -50,6 +51,28 @@
   height: auto;
   border-radius: 8px;
   animation: fade-up 1s;
+}
+
+.button {
+  width: 120px;
+  height: 50px;
+  border: none;
+  border-radius: 5px;
+  text-decorations: none;
+  background-color: black;
+  color: white;
+
+  transition: background-color 0.3s ease;
+  transition: transform 0.3s ease;
+}
+
+.button:hover {
+  background-color: #333;
+  transform: scale(1.05);
+}
+
+.buttonText {
+  font-family: 'Inter', sans-serif;
 }
 
 @keyframes fade-up {
@@ -73,5 +96,5 @@
 /* The typewriter cursor effect */
 @keyframes blink-caret {
   from, to { border-color: transparent }
-  50% { border-color: white; }
+  50% { border-color: black; }
 }
