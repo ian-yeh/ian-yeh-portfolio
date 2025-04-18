@@ -56,7 +56,7 @@ const AboutSection = () => {
           <ion-icon name="logo-linkedin"></ion-icon>
           <ion-icon name="logo-github"></ion-icon>
           <ion-icon name="logo-instagram"></ion-icon>
-          <ion-icon name="logo-newspaper-outline"></ion-icon>
+          <ion-icon name="newspaper-outline"></ion-icon>
         </div>
 
       </div>
