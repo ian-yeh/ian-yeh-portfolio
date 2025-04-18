@@ -12,6 +12,7 @@
 
 .formGroup {
   margin-bottom: 20px;
+  width: 100%;
 }
 
 .label {
@@ -27,6 +28,7 @@
   border: 1px solid #ccc;
   border-radius: 4px;
   font-size: 16px;
+  box-sizing: border-box;
 }
 
 .error {
@@ -36,18 +38,19 @@
 }
 
 .submitButton {
-  background-color: #1976d2;
+  background-color: black;
   color: white;
   padding: 12px 20px;
   border: none;
   border-radius: 4px;
   cursor: pointer;
-  font-size: 16px;
+  font-size: 14px;
   transition: background-color 0.3s;
+  width: 100%;
 }
 
 .submitButton:hover {
-  background-color: #1565c0;
+  background-color: #333;
 }
 
 .submitButton:disabled {

@@ -9,9 +9,7 @@ const validationSchema = Yup.object().shape({
   email: Yup.string()
     .email('Invalid email address')
     .required('Email is required'),
-  password: Yup.string()
-    .required('Password is required')
-    .min(8, 'Password must be at least 8 characters'),
+  message: Yup.string()
 });
 
 const FormComponent = () => {
@@ -19,17 +17,36 @@ const FormComponent = () => {
     initialValues: {
       name: '',
       email: '',
-      password: '',
+      message: '',
     },
     validationSchema,
-    onSubmit: (values) => {
-      alert(JSON.stringify(values, null, 2));
-      // Typically you would call an API here
-    },
   });
 
+  const onSubmit = async (event) => {
+    event.preventDefault();
+    const formData = new FormData(event.target);
+
+    formData.append("access_key", "bbe0ff9b-ec48-4275-a199-07394d4e9f95");
+
+    const object = Object.fromEntries(formData);
+    const json = JSON.stringify(object);
+
+    const res = await fetch("https://api.web3forms.com/submit", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Accept: "application/json"
+      },
+      body: json
+    }).then((res) => res.json());
+
+    if (res.success) {
+      console.log("Success", res);
+    }
+  };
+
   return (
-    <form onSubmit={formik.handleSubmit} className={styles.form}>
+    <form onSubmit={onSubmit} className={styles.form}>
       <div className={styles.formGroup}>
         <label htmlFor="name" className={styles.label}>
           Name
@@ -67,20 +84,20 @@ const FormComponent = () => {
       </div>
 
       <div className={styles.formGroup}>
-        <label htmlFor="password" className={styles.label}>
-          Password
+        <label htmlFor="message" className={styles.label}>
+          Message
         </label>
         <input
-          id="password"
-          name="password"
-          type="password"
+          id="message"
+          name="message"
+          type="text"
           onChange={formik.handleChange}
           onBlur={formik.handleBlur}
-          value={formik.values.password}
+          value={formik.values.message}
           className={styles.input}
         />
-        {formik.touched.password && formik.errors.password ? (
-          <div className={styles.error}>{formik.errors.password}</div>
+        {formik.touched.message && formik.errors.message ? (
+          <div className={styles.error}>{formik.errors.message}</div>
         ) : null}
       </div>
 
@@ -89,7 +106,7 @@ const FormComponent = () => {
         className={styles.submitButton}
         disabled={formik.isSubmitting || !formik.isValid}
       >
-        Submit
+        Send Message
       </button>
     </form>
   );

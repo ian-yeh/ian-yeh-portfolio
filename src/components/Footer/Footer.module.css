@@ -1,9 +1,9 @@
-.footer-text {
+.footerext {
   color: black;
   font-family: 'Inter', sans-serif;
 }
 
-.footer-container {
+.footerContainer {
   margin: 0 auto;
   width: 1200px;
   display: flex;
@@ -11,4 +11,8 @@
   height: 80px;
   background-color: white; 
   align-items: center;
+}
+
+.iconContainer {
+  border: 1px solid black;
 }
