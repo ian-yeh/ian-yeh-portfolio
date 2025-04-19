@@ -70,13 +70,13 @@ li {
   display: flex;
 }
 
-ion-icon {
+.linkIcons {
   font-size: 32px;
   color: black;
   margin-right: 8px;
 }
 
-ion-icon:hover {
+.linkIcons:hover {
   color: grey;
   transition: color 0.3s ease;
 }

@@ -10,18 +10,9 @@
   z-index: 1000;
 }
 
-.scrolled {
-  color: rgba(250, 250, 250, 0.9);
-  transition: color 0.2s ease-in-out;
-}
-
-.notScrolled {
-  color: black;
-  transition: color 0.2s ease-in-out;
-}
-
 /* Text styles - applied to both logo and nav links */
 .headerText {
+  color: black;
   font-family: 'Lato', sans-serif;
   font-weight: 700;
   text-decoration: none;

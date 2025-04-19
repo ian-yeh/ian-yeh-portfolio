@@ -1,13 +1,10 @@
 // src/components/Header/Header.tsx
-import { useState, useEffect, useRef } from 'react';
-
+import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import styles from './Header.module.css';
 
 function Header() {
   const [scrollPercentage, setScrollPercentage] = useState(0);
-  const [activeBar, setActiveBar] = useState(false);
-
 
   useEffect(() => {
     const handleScroll = () => {
@@ -24,9 +21,8 @@ function Header() {
   
   return (
     <header className={styles.header}>
-
-      <div >
-        <Link className={`${styles.logo} ${styles.headerText} ${activeBar ? styles.scrolled : styles.notScrolled}`} to="/">
+      <div>
+        <Link className={`${styles.logo} ${styles.headerText}`} to="/">
           &lt;IAN.YEH/&gt;
         </Link>
       </div>
@@ -34,26 +30,17 @@ function Header() {
       <nav className={styles.nav}>
         <ul className={styles.navList}>
           <li className={`${styles.navItem} ${styles.fadeUp1}`}>
-            <Link 
-              className={`${styles.headerText} ${styles.navLink} ${activeBar ? styles.scrolled:styles.notScrolled}`} 
-              to="/"
-            >
+            <Link className={`${styles.headerText} ${styles.navLink}`} to="/">
               (HOME)
             </Link>
           </li>
           <li className={`${styles.navItem} ${styles.fadeUp2}`}>
-            <Link 
-              className={`${styles.headerText} ${styles.navLink} ${activeBar ? styles.scrolled:styles.notScrolled}`} 
-              to="/about"
-            >
+            <Link className={`${styles.headerText} ${styles.navLink}`} to="/about">
               (ABOUT) 
             </Link>
           </li>
           <li className={`${styles.navItem} ${styles.fadeUp3}`}>
-            <Link 
-              className={`${styles.headerText} ${styles.navLink} ${activeBar ? styles.scrolled:styles.notScrolled}`} 
-              to="/contact"
-            >
+            <Link className={`${styles.headerText} ${styles.navLink}`} to="/contact">
               (CONTACT) 
             </Link>
           </li>
@@ -61,10 +48,9 @@ function Header() {
       </nav>
 
       {/* Scroll progress */}
-      <p className={`${styles.percentageDisplay} ${activeBar? styles.scrolled:styles.notScrolled}`}>
+      <p className={styles.percentageDisplay}>
         {scrollPercentage}%
       </p>
-
     </header>
   );
 }

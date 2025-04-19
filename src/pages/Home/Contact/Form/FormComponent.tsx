@@ -20,33 +20,40 @@ const FormComponent = () => {
       message: '',
     },
     validationSchema,
+    onSubmit: async (values, { setSubmitting, resetForm }) => {
+      try {
+        const formData = new FormData();
+        formData.append("name", values.name);
+        formData.append("email", values.email);
+        formData.append("message", values.message);
+        formData.append("access_key", "bbe0ff9b-ec48-4275-a199-07394d4e9f95");
+
+        const object = Object.fromEntries(formData);
+        const json = JSON.stringify(object);
+
+        const res = await fetch("https://api.web3forms.com/submit", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            Accept: "application/json"
+          },
+          body: json
+        }).then((res) => res.json());
+
+        if (res.success) {
+          console.log("Success", res);
+          resetForm();
+        }
+      } catch (error) {
+        console.error("Error submitting form:", error);
+      } finally {
+        setSubmitting(false);
+      }
+    },
   });
 
-  const onSubmit = async (event) => {
-    event.preventDefault();
-    const formData = new FormData(event.target);
-
-    formData.append("access_key", "bbe0ff9b-ec48-4275-a199-07394d4e9f95");
-
-    const object = Object.fromEntries(formData);
-    const json = JSON.stringify(object);
-
-    const res = await fetch("https://api.web3forms.com/submit", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        Accept: "application/json"
-      },
-      body: json
-    }).then((res) => res.json());
-
-    if (res.success) {
-      console.log("Success", res);
-    }
-  };
-
   return (
-    <form onSubmit={onSubmit} className={styles.form}>
+    <form onSubmit={formik.handleSubmit} className={styles.form}>
       <div className={styles.formGroup}>
         <label htmlFor="name" className={styles.label}>
           Name
@@ -87,14 +94,14 @@ const FormComponent = () => {
         <label htmlFor="message" className={styles.label}>
           Message
         </label>
-        <input
+        <textarea
           id="message"
           name="message"
-          type="text"
           onChange={formik.handleChange}
           onBlur={formik.handleBlur}
           value={formik.values.message}
           className={styles.input}
+          rows={5}
         />
         {formik.touched.message && formik.errors.message ? (
           <div className={styles.error}>{formik.errors.message}</div>
@@ -106,7 +113,7 @@ const FormComponent = () => {
         className={styles.submitButton}
         disabled={formik.isSubmitting || !formik.isValid}
       >
-        Send Message
+        {formik.isSubmitting ? 'Sending...' : 'Send Message'}
       </button>
     </form>
   );

@@ -1,4 +1,4 @@
-.footerext {
+.footerText {
   color: black;
   font-family: 'Inter', sans-serif;
 }
@@ -15,4 +15,15 @@
 
 .iconContainer {
   border: 1px solid black;
+}
+
+.icon {
+  font-size: 32px;
+  color: black;
+  margin-right: 8px;
+}
+
+.icon:hover {
+  color: grey;
+  transition: color 0.3s ease;
 }
