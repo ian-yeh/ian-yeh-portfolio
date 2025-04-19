@@ -84,3 +84,70 @@ li {
 .icons {
   margin-top: 32px;
 }
+
+@media screen and (max-width: 768px) {
+  .textContainer {
+    width: 100%
+  }
+
+  .container {
+    padding: 50px 20px; /* Reduce padding for tablets */
+  }
+
+  .heading {
+    font-size: 1.2rem; /* Reduce heading size */
+    text-align: center;
+  }
+
+  .contentContainer {
+    flex-direction: column; /* Stack content vertically */
+  }
+
+  .mainText {
+    font-size: 0.8rem; /* Adjust font size for tablets */
+    width: 100%; /* Expand width for readability */
+    margin-bottom: 2%;
+  }
+
+  .skills {
+    width: 100%; /* Make skills section full width */
+    padding: 0;
+    padding-top: 4%;
+    padding-bottom: 4%;
+  }
+
+  .skillsTitle {
+    font-size: 1rem; /* Adjust title size */
+    padding-left: 4%;
+  }
+
+  .skillsContainer {
+  }
+
+  .linkIcons {
+    font-size: 24px; /* Smaller icon size for tablets */
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .container {
+    padding: 30px 15px; /* Compact padding for very small screens */
+  }
+
+  .heading {
+    font-size: 1.5rem; /* Further reduce heading size */
+  }
+
+  .mainText {
+    font-size: 0.7rem; /* Adjust font size for smaller screens */
+    line-height: 1.2rem; /* Compact line height */
+  }
+
+  .skillsTitle {
+    font-size: 0.9rem; /* Reduce skills title size */
+  }
+
+  .linkIcons {
+    font-size: 20px; /* Even smaller icon size */
+  }
+}

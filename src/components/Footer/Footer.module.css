@@ -27,3 +27,47 @@
   color: grey;
   transition: color 0.3s ease;
 }
+
+@media screen and (max-width: 768px) {
+  .footerContainer {
+    flex-direction: column; /* Stack items vertically */
+    justify-content: center; /* Center content on smaller screens */
+    text-align: center; /* Align text for readability */
+    height: auto; /* Adjust height dynamically */
+    width: 100%;
+    margin: 0 auto;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+
+  .footerText {
+    margin-bottom: 10px; /* Add space between text and icons */
+  }
+
+  .iconContainer {
+    justify-content: center; /* Center icons */
+    gap: 8px; /* Reduce spacing between icons */
+  }
+
+  .icon {
+    font-size: 20px; /* Smaller icon size for mobile */
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .footerContainer {
+    margin: 0;
+  }
+
+  .footerText {
+    font-size: 0.9rem; /* Adjust text size for better fit */
+  }
+
+  .icon {
+    font-size: 18px; /* Further reduce icon size */
+  }
+
+  .iconContainer {
+    gap: 5px; /* Tighten spacing between icons */
+  }
+}

@@ -1,5 +1,6 @@
 /* src/components/Header/Header.module.css */
 .header {
+  box-sizing: border-box;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -8,6 +9,7 @@
   position: sticky;
   top: 0;
   z-index: 1000;
+  width: 100%;
 }
 
 /* Text styles - applied to both logo and nav links */
@@ -96,4 +98,34 @@
   z-index: 1001;
   transition: width 0.1s linear;
   text-align: center;
+}
+
+/* Responsive styles */
+@media screen and (max-width: 768px) {
+  .header {
+    width: 100%;
+    justify-content: space-between;
+    box-sizing: border-box;
+    margin: 0;
+    display: flex;
+  }
+
+  .navList {
+    display: none;
+  }
+
+  .headerText {
+    font-size: 0.9rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .navList {
+    justify-content: center;
+    gap: 0.5rem; 
+  }
+
+  .headerText {
+    font-size: 0.8rem; 
+  }
 }

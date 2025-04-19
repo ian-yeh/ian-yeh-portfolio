@@ -1,4 +1,4 @@
-/* AboutSection.module.css */
+/* Contact.module.css */
 * {
   font-family: 'Inter', sans-serif;
 }
@@ -34,3 +34,36 @@
   align-items: left;
 }
 
+@media screen and (max-width: 768px) {
+  .container {
+    padding: 30px 15px; /* Compact padding for tablets */
+  }
+
+  .heading {
+    font-size: 1.2rem; /* Adjust heading size for tablets */
+    text-align: center;
+  }
+
+  .textContainer {
+    width: 100%; /* Expand width for smaller devices */
+    text-align: center;
+  }
+
+  .formWrapper {
+    width: 90%; /* Slightly narrow the form for tablets */
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .container {
+    padding: 20px 10px; /* Compact padding for very small devices */
+  }
+
+  .heading {
+    font-size: 1.5rem; /* Reduce heading size for smaller screens */
+  }
+
+  .formWrapper {
+    width: 100%; /* Ensure form spans full width */
+  }
+}

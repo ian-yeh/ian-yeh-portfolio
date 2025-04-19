@@ -25,3 +25,23 @@
   text-align: left;
   margin-bottom: 2%;
 }
+
+@media screen and (max-width: 480px) {
+  .projectContainer {
+    padding: 0 10px; /* Compact padding for very small devices */
+    margin-top: 1%; /* Adjust margin for tight screens */
+    width: 100%;
+  }
+
+  .projectList {
+    grid-template-columns: repeat(300px); /* Compact column size for smaller phones */
+    gap: 8px; /* Tighten gap for better fit */
+    justify-content: center;
+  }
+
+  .heading {
+    font-size: 1.3rem; /* Further reduce font size for smaller screens */
+    margin-top: 2%;
+    text-align: center;
+  }
+}
