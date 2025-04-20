@@ -10,6 +10,8 @@ const FrontPage = () => {
     setShowContact(true);
   }
 
+  console.log(showContact);
+
   return (
     <div className={styles.container}>
       {/* SECTION 1 */}
