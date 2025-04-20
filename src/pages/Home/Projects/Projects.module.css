@@ -1,47 +1,74 @@
-.projectContainer {
-  margin-top: 4%;
-  margin-left: auto;
-  margin-right: auto;
-  width: 1200px;
+.container {
+  width: 100%;
+  padding-top: 150px;
+  padding-bottom: 150px;
+}
+
+.contentContainer {
+  margin: 0 auto;
+  width: 75%;
   height: fit-content;
-  box-sizing: border-box;
 }
 
 .projectList {
   width: 100%;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-  gap: 19px;
+  gap: 20px;
   justify-content: space-between;
   height: fit-content;
-  padding: 10px;
   box-sizing: border-box;
-  margin-bottom: 12%;
 }
 
 .heading {
   color: black;
   font-size: 2.5rem;
   text-align: left;
-  margin-bottom: 2%;
+  margin-bottom: 32px;
 }
 
-@media screen and (max-width: 480px) {
-  .projectContainer {
-    padding: 0 10px; /* Compact padding for very small devices */
-    margin-top: 1%; /* Adjust margin for tight screens */
+@media screen and (max-width: 768px) {
+  .container {
     width: 100%;
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+
+  .contentContainer {
+    margin-top: 1%; 
+    width: 84%;
   }
 
   .projectList {
-    grid-template-columns: repeat(300px); /* Compact column size for smaller phones */
-    gap: 8px; /* Tighten gap for better fit */
-    justify-content: center;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+    gap: 10px;
   }
 
   .heading {
-    font-size: 1.3rem; /* Further reduce font size for smaller screens */
+    font-size: 1.3rem;
     margin-top: 2%;
-    text-align: center;
+  }
+  
+}
+
+@media screen and (max-width: 604px) {
+  .contentContainer {
+    padding: 0 8px;
+  }
+
+  .projectList {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); 
+    gap: 4px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .contentContainer {
+    padding: 0 8px;
+  }
+
+  .projectList {
+    margin: 0 auto;
+    width: fit-content;
   }
 }

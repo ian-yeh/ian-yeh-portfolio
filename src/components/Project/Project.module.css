@@ -1,13 +1,13 @@
 * {
   font-family: 'Inter', sans-serif;
 }
-.project {
+
+.container {
   border: 0.5px solid grey;
   width: 300px;
   height: fit-content;
   background-color: white;
   display: flex;
-  flex-direction: column;
   align-items: center;
   border-radius: 2% 2% 0 0;
   margin-top: 4%;
@@ -20,7 +20,7 @@
   text-decoration: none;
 }
 
-.project:hover {
+.container:hover {
   transition: all 0.3s ease;
   filter: brightness(94%);
   transform: translateY(-2px);
@@ -68,4 +68,63 @@
   border-radius: 5px;
   font-size: 0.5rem;
   height: fit-content;
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    width: 250px;
+    margin-top: 2%;
+    border-radius: 1% 1% 0 0;
+  }
+
+  .image {
+    width: 250px;
+    height: 125px;
+    margin: 0;
+  }
+
+  .tech {
+    margin-right: 2%;
+    padding: 4px;
+  }
+
+  .title {
+    margin-top: 2%;
+    font-size: 0.9rem;
+  }
+
+  .description {
+    margin-top: 2%;
+    font-size: 0.58rem;
+  }
+
+}
+
+@media screen and (max-width: 604px) {
+  .container {
+    width: 200px;
+    margin-top: 2%;
+    border-radius: 1% 1% 0 0;
+  }
+
+  .image {
+    width: 200px;
+    height: 100px;
+    margin: 0;
+  }
+
+  .tech {
+    font-size: 0.4rem;
+  }
+
+  .title {
+    margin-top: 2%;
+    font-size: 0.8rem;
+  }
+
+  .description {
+    margin-top: 2%;
+    font-size: 0.58rem;
+  }
+
 }

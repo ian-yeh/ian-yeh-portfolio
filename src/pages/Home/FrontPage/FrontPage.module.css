@@ -4,18 +4,17 @@
  }
 
 .container {
-  display: flex;
-  align-items: center;
-  padding: 150px;
-  max-width: 1200px;
+  padding-top: 150px;
+  padding-bottom: 150px;
   margin: 0 auto;
   background-color: #ffffff;
-  border: 1px solid black;
+  width: 100%;
 }
 
 .textContainer {
-  flex: 1;
-  padding-right: 40px;
+  width: 75%;
+  margin: 0 auto;
+  padding: 0;
 }
 
 .heading {
@@ -38,6 +37,8 @@
   margin-bottom: 20px;
   margin-top: 24px;
   animation: fade-up 0.9s;
+
+  color: rgb(60, 60, 60);
 }
 
 .imageContainer {
@@ -100,76 +101,27 @@
   50% { border-color: black; }
 }
 
-@media screen and (min-width: 768px) {
-  .container {
-    display: flex;
-    flex-direction: row; /* Keep desktop layout unchanged */
-    width: 100%;
-    justify-content: center;
-  }
-
-  .textContainer {
-    text-align: left;
-    padding: 0;
-    padding-left: 4%;
-    margin: 0;
-  }
-
-  .heading {
-    font-size: 2.5rem;
-    margin: 0 auto 20px;
-    border-width: 4px;
-  }
-
-  .paragraph {
-    font-size: 1.1rem;
-    line-height: 1.6;
-  }
-
-  .imageContainer {
-    flex: 1;
-    margin-top: 0;
-  }
-
-  .image {
-    max-width: 100%;
-  }
-
-  .button {
-    width: 120px;
-    height: 50px;
-    font-size: 1rem;
-  }
-}
-
 @media screen and (max-width: 768px) {
   .container {
-    flex-direction: column; /* Stack elements */
     padding: 0;
     margin: 0;
     width: 100%;
+    padding-top: 60px;
+    padding-bottom: 60px;
   }
 
   .textContainer {
     margin-bottom: 20px;
     text-align: left;
-    padding-left: 4%;
+    width: 84%;
   }
 
   .heading {
-    font-size: 1.8rem; /* Smaller font */
+    font-size: 1.8rem;
   }
 
   .paragraph {
-    font-size: 1rem; /* Adjust font size */
-  }
-
-  .imageContainer {
-    margin-top: 20px;
-  }
-
-  .image {
-    max-width: 90%; /* Prevent image overflow */
+    font-size: 1rem;
   }
 
   .button {
@@ -184,7 +136,7 @@
   }
 
   .paragraph {
-    font-size: 0.9rem; /* Smaller font size */
+    font-size: 0.8rem; /* Smaller font size */
   }
 
   .button {

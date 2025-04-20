@@ -4,12 +4,12 @@
 }
 
 .container {
-  padding: 150px;
-  height: fit-content;
-  background-size: cover;
+  padding-top: 150px;
+  padding-bottom: 150px;
   background-color: rgb(240, 240, 240);
-  display: grid;
+  height: fit-content;
   align-items: center;
+  width: 100%;
 }
 
 .heading {
@@ -20,7 +20,7 @@
 
 .textContainer {
   height: fit-content;
-  width: 1200px;
+  width: 75%;
   margin: 0 auto;
 }
 
@@ -30,40 +30,39 @@
 }
 
 .formWrapper {
-  width: 1200px;
-  align-items: left;
+  width: 100%;
+  align-items: center;
 }
 
 @media screen and (max-width: 768px) {
   .container {
-    padding: 30px 15px; /* Compact padding for tablets */
+    width: 100%;
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+
+  .contentContainer {
+    width: 100%;
   }
 
   .heading {
-    font-size: 1.2rem; /* Adjust heading size for tablets */
-    text-align: center;
+    font-size: 1.3rem;
   }
 
   .textContainer {
-    width: 100%; /* Expand width for smaller devices */
+    width: 84%;
     text-align: center;
   }
 
   .formWrapper {
-    width: 90%; /* Slightly narrow the form for tablets */
+    width: 100%; 
   }
 }
 
 @media screen and (max-width: 480px) {
-  .container {
-    padding: 20px 10px; /* Compact padding for very small devices */
-  }
 
   .heading {
-    font-size: 1.5rem; /* Reduce heading size for smaller screens */
+    font-size: 1.2rem;
   }
 
-  .formWrapper {
-    width: 100%; /* Ensure form spans full width */
-  }
 }

@@ -16,7 +16,7 @@ const Project: React.FC<ProjectProps> = ({
   repository
 }) => {
   return (
-    <div className={styles.project}>
+    <div className={styles.container}>
       <a href={repository} className={styles.link}>
         <img className={styles.image} src={imageUrl} alt={title} />
         <h2 className={`section2Text ${styles.title}`}>{title}</h2>

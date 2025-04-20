@@ -8,14 +8,18 @@ import {
 
 function Footer() {
   return (
-    <div className={styles.footerContainer}>
-      <div className={styles.footerText}>
-        Made with React.js and CSS by yours truly using NeoVim.
+    <div className={styles.container}>
+
+      <div className={styles.footerContainer}>
+        <div className={styles.footerText}>
+          Made with React.js and CSS by yours truly using NeoVim.
+        </div>
+        <div className={styles.footerIconContainer}>
+          <IonIcon icon={logoGithub} className={styles.icon} />
+          <IonIcon icon={logoLinkedin} className={styles.icon} />
+        </div>
       </div>
-      <div className={styles.footerIconContainer}>
-        <IonIcon icon={logoGithub} className={styles.icon} />
-        <IonIcon icon={logoLinkedin} className={styles.icon} />
-      </div>
+
     </div>
   );
 }

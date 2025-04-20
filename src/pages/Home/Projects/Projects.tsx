@@ -8,25 +8,27 @@ import styles from './Projects.module.css';
 const Projects = () => {
 
   return (
-    <div className={styles.projectContainer}>
+    <div className={styles.container}>
+      <div className={styles.contentContainer}>
 
-      {/* adding my projects into the site */}
-      <FadeInSection>
-        <p className={styles.heading}>( PROJECTS )</p>
-      </FadeInSection>
+        {/* adding my projects into the site */}
+        <FadeInSection>
+          <p className={styles.heading}>( PROJECTS )</p>
+        </FadeInSection>
 
-      <div className={styles.projectList}>
-        {projectsData.map((project) => (
-          <FadeInSection key={project.id}>
-            <Project
-              title={project.title}
-              description={project.description}
-              technologies={project.technologies}
-              imageUrl={project.imageUrl}
-              repository={project.repository}
-            />
-          </FadeInSection>
-        ))}
+        <div className={styles.projectList}>
+          {projectsData.map((project) => (
+            <FadeInSection key={project.id}>
+              <Project
+                title={project.title}
+                description={project.description}
+                technologies={project.technologies}
+                imageUrl={project.imageUrl}
+                repository={project.repository}
+              />
+            </FadeInSection>
+          ))}
+        </div>
       </div>
 
     </div>

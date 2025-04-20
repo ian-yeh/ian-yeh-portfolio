@@ -1,9 +1,13 @@
+import { useState } from 'react';
 import styles from './FrontPage.module.css';
 
+import Contact from '../Contact/Contact.tsx';
+
 const FrontPage = () => {
+  const [showContact, setShowContact] = useState(false);
 
   const handleButton = () => {
-    alert("Hello, World!");
+    setShowContact(true);
   }
 
   return (
@@ -21,6 +25,7 @@ const FrontPage = () => {
         <button onClick={handleButton} className={styles.button}>
           <p className={styles.buttonText}>Let's Talk</p>
         </button>
+
 
        </div>
     </div>

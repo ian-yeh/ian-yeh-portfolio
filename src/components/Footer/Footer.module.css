@@ -3,9 +3,13 @@
   font-family: 'Inter', sans-serif;
 }
 
+.container {
+  width: 100%;
+}
+
 .footerContainer {
   margin: 0 auto;
-  width: 1200px;
+  width: 75%;
   display: flex;
   justify-content: space-between;
   height: 80px;
