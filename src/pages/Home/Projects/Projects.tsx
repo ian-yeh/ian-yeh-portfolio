@@ -7,7 +7,7 @@ import Project from '../../../components/Project/Project.tsx';
 
 import styles from './Projects.module.css';
 
-const Projects = forwardRef((props, ref) => {
+const Projects = forwardRef<HTMLDivElement>(({}, ref) => {
 
   return (
     <div ref={ref} className={styles.container}>

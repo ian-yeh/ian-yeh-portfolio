@@ -5,7 +5,7 @@ import FormComponent from './Form/FormComponent.tsx';
 import styles from './Contact.module.css';
 
 
-const Contact = forwardRef((props, ref) => {
+const Contact = forwardRef<HTMLDivElement>(({}, ref) => {
 
   return (
     <div ref={ref} className={styles.container}>

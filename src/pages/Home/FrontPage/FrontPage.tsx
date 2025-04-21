@@ -1,7 +1,11 @@
 import { forwardRef } from 'react';
 import styles from './FrontPage.module.css';
 
-const FrontPage = forwardRef( ({ scrollToContact }, ref) => {
+interface FrontPageProps {
+  scrollToContact: () => void;
+}
+
+const FrontPage = forwardRef<HTMLDivElement, FrontPageProps>( ({ scrollToContact }, ref) => {
 
   return (
     <div ref={ref} className={styles.container}>

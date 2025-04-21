@@ -16,7 +16,7 @@ import {
   newspaperOutline 
 } from 'ionicons/icons';
 
-const AboutSection = forwardRef((props, ref) => {
+const AboutSection = forwardRef<HTMLDivElement>(({}, ref) => {
   return (
     <div ref={ref} className={styles.container}>
       {/* SECTION 2 MY TECHNOLOGIES USED: TO DO ADD BACKGROUND */}

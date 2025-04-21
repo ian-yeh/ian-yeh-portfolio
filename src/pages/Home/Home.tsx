@@ -1,5 +1,4 @@
 import { useRef } from 'react';
-
 import FrontPage from './FrontPage/FrontPage';
 import AboutSection from './AboutSection/AboutSection';
 import Projects from './Projects/Projects';
@@ -9,43 +8,38 @@ import Header from '../../components/Header/Header.tsx';
 import Footer from '../../components/Footer/Footer.tsx';
 
 const Home = () => {
-  const contactRef = useRef(null);
-  const aboutRef = useRef(null);
-  const projectRef = useRef(null);
-  const homeRef = useRef(null);
+  const contactRef = useRef<HTMLDivElement>(null);
+  const aboutRef = useRef<HTMLDivElement>(null);
+  const projectRef = useRef<HTMLDivElement>(null);
+  const homeRef = useRef<HTMLDivElement>(null);
+
+  const scrollTo = (ref: React.RefObject<HTMLDivElement>) => {
+    ref.current?.scrollIntoView({
+      behavior: 'smooth',
+      block: 'start'
+    });
+  };
 
   return (
     <div>
       <Header 
-        scrollToAbout={() => aboutRef.current?.scrollIntoView({ behavior: 'smooth' })} 
-        scrollToProjects={() => projectRef.current?.scrollIntoView({ behavior: 'smooth' })} 
-        scrollToHome={() => homeRef.current?.scrollIntoView({ behavior: 'smooth' })} 
+        scrollToAbout={() => scrollTo(aboutRef)} 
+        scrollToProjects={() => scrollTo(projectRef)}
+        scrollToHome={() => scrollTo(homeRef)}
       />
 
       <FrontPage 
-        scrollToContact={() => contactRef.current?.scrollIntoView({ behavior: 'smooth' })} 
+        scrollToContact={() => scrollTo(contactRef)}
         ref={homeRef}
       />
 
-      <AboutSection
-        ref={aboutRef}
-      />
-
-      <Projects
-        ref={projectRef}
-      />
-
-      <Contact 
-        ref={contactRef} 
-      />
+      <AboutSection ref={aboutRef} />
+      <Projects ref={projectRef} />
+      <Contact ref={contactRef} />
 
       <Footer />
     </div>
-    
   );
 };
-
-
-
 
 export default Home;
