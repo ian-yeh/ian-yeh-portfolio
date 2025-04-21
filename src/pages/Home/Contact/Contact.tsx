@@ -1,13 +1,14 @@
+import { forwardRef } from 'react';
 import { FadeInSection } from '../../../components/FadeInSection/FadeInSection.tsx';
 import FormComponent from './Form/FormComponent.tsx';
 
 import styles from './Contact.module.css';
 
 
-const Contact = () => {
+const Contact = forwardRef((props, ref) => {
 
   return (
-    <div className={styles.container}>
+    <div ref={ref} className={styles.container}>
       <div className={styles.textContainer}>
 
         <FadeInSection>
@@ -32,6 +33,6 @@ const Contact = () => {
 
     </div>
   );
-}
+});
 
 export default Contact;

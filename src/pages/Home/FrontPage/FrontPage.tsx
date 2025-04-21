@@ -1,25 +1,21 @@
+import { forwardRef } from 'react';
 import styles from './FrontPage.module.css';
 
-const FrontPage = () => {
-
-  const handleButton = () => {
-    alert("hello, world");
-  }
-
+const FrontPage = forwardRef( ({ scrollToContact }, ref) => {
 
   return (
-    <div className={styles.container}>
+    <div ref={ref} className={styles.container}>
       {/* SECTION 1 */}
       <div className={styles.textContainer}>
         <h1 className={styles.heading}>Hello, I'm Ian Yeh.</h1>
         <p className={styles.paragraph}>
-          A 17-year-old aspiring software developer from Ontario, Canada. An Engineering student at McMaster University.
+          Software Engineering @ McMaster University
         </p>
         <p className={styles.paragraph}>
           I'm glad that you're here, feel free to take a look!
         </p>
 
-        <button onClick={handleButton} className={styles.button}>
+        <button onClick={scrollToContact} className={styles.button}>
           <p className={styles.buttonText}>Let's Talk</p>
         </button>
 
@@ -27,6 +23,6 @@ const FrontPage = () => {
        </div>
     </div>
   )
-}
+});
 
 export default FrontPage;

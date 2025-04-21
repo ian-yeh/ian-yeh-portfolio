@@ -1,6 +1,10 @@
+import { forwardRef } from 'react';
+
 import { FadeInSection } from '../../../components/FadeInSection/FadeInSection.tsx';
 import styles from './AboutSection.module.css';
+
 import { IonIcon } from '@ionic/react';
+// importing logos
 import { 
   logoGithub, 
   logoHtml5, 
@@ -12,9 +16,9 @@ import {
   newspaperOutline 
 } from 'ionicons/icons';
 
-const AboutSection = () => {
+const AboutSection = forwardRef((props, ref) => {
   return (
-    <div className={styles.container}>
+    <div ref={ref} className={styles.container}>
       {/* SECTION 2 MY TECHNOLOGIES USED: TO DO ADD BACKGROUND */}
       <div className={styles.textContainer}>
 
@@ -66,6 +70,6 @@ const AboutSection = () => {
       </div>
     </div>
   );
-}
+});
 
 export default AboutSection;

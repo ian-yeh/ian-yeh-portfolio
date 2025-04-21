@@ -3,11 +3,10 @@
 }
 
 .container {
-  border: 0.5px solid grey;
+  border: 1px solid grey;
   width: 300px;
-  height: fit-content;
+  height: 280px;
   background-color: white;
-  display: flex;
   align-items: center;
   border-radius: 2% 2% 0 0;
   margin-top: 4%;
@@ -22,22 +21,24 @@
 
 .container:hover {
   transition: all 0.3s ease;
-  filter: brightness(94%);
+  filter: brightness(96%);
   transform: translateY(-2px);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+  cursor: none;
 }
 
 .image {
   width: 300px;
   height: 150px;
-  border-radius: 2% 2% 0% 0%;
+  border-radius: 1% 1% 0% 0%;
 }
 
 .title {
   padding-left: 4%;
   padding-right: 4%;
   text-align: left;
-  font-size: 1.0rem;
+  font-size: 1.2rem;
   margin-top: 4%;
   width: 92%;
   font-weight: 500;
@@ -48,8 +49,9 @@
   padding-right: 4%;
   text-align: left;
   margin-top: 4%;
-  font-size: 0.6rem;
+  font-size: 0.8rem;
   color: #666;
+  height: 12%;
 }
 
 .technologies {
@@ -66,13 +68,40 @@
   background-color: rgb(230, 230, 230);
   padding: 8px;
   border-radius: 5px;
-  font-size: 0.5rem;
+  font-size: 0.6rem;
   height: fit-content;
+}
+
+.hoverBox {
+  padding: 5px 10px;
+  width: fit-content;
+  background-color: rgba(0, 0, 0, 0.9);
+  text-align: left;
+  display: flex;
+  align-items: center;
+  border-radius: 5px;
+  pointer-events: none; /* Prevent interference with mouse events */
+  white-space: nowrap;
+  z-index: 1000;
+
+  transition: position 0.3s ease;
+}
+
+.view {
+  color: rgb(200, 200, 200);
+  font-size: 12px;
+}
+
+.icon {
+  color: rgb(200, 200, 200);
+  font-size: 16px;
+  margin-left: 4px;
 }
 
 @media screen and (max-width: 768px) {
   .container {
     width: 250px;
+    height: 250px;
     margin-top: 2%;
     border-radius: 1% 1% 0 0;
   }
@@ -103,6 +132,7 @@
 @media screen and (max-width: 604px) {
   .container {
     width: 200px;
+    height: 200px;
     margin-top: 2%;
     border-radius: 1% 1% 0 0;
   }

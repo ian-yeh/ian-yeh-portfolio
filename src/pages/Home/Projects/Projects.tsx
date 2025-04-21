@@ -1,3 +1,5 @@
+import { forwardRef } from 'react';
+
 import { projectsData } from '../../../data/projects.js';
 
 import { FadeInSection } from '../../../components/FadeInSection/FadeInSection.tsx';
@@ -5,10 +7,10 @@ import Project from '../../../components/Project/Project.tsx';
 
 import styles from './Projects.module.css';
 
-const Projects = () => {
+const Projects = forwardRef((props, ref) => {
 
   return (
-    <div className={styles.container}>
+    <div ref={ref} className={styles.container}>
       <div className={styles.contentContainer}>
 
         {/* adding my projects into the site */}
@@ -33,6 +35,6 @@ const Projects = () => {
 
     </div>
   )
-}
+});
 
 export default Projects;

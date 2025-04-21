@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import styles from './Header.module.css';
 
-function Header() {
+const Header = ({ scrollToAbout, scrollToProjects, scrollToHome }) => {
   const [scrollPercentage, setScrollPercentage] = useState(0);
 
   useEffect(() => {
@@ -13,6 +13,9 @@ function Header() {
       const scrolled = Math.ceil((scrollTop / scrollHeight) * 100);
 
       setScrollPercentage(scrolled);
+
+      if (scrollPercentage > 100) setScrollPercentage(100);
+      if (scrollPercentage < 0) setScrollPercentage(0);
     };
 
     window.addEventListener('scroll', handleScroll);
@@ -30,19 +33,25 @@ function Header() {
       <nav className={styles.nav}>
         <ul className={styles.navList}>
           <li className={`${styles.navItem} ${styles.fadeUp1}`}>
-            <Link className={`${styles.headerText} ${styles.navLink}`} to="/">
-              (HOME)
-            </Link>
+            <button onClick={scrollToHome}>
+              <Link className={`${styles.headerText} ${styles.navLink}`}>
+                (HOME)
+              </Link>
+            </button>
           </li>
           <li className={`${styles.navItem} ${styles.fadeUp2}`}>
-            <Link className={`${styles.headerText} ${styles.navLink}`} to="/about">
-              (ABOUT) 
-            </Link>
+            <button onClick={scrollToAbout}>
+              <Link className={`${styles.headerText} ${styles.navLink}`}>
+                (ABOUT) 
+              </Link>
+            </button>
           </li>
           <li className={`${styles.navItem} ${styles.fadeUp3}`}>
-            <Link className={`${styles.headerText} ${styles.navLink}`} to="/contact">
-              (CONTACT) 
-            </Link>
+            <button onClick={scrollToProjects}>
+              <Link className={`${styles.headerText} ${styles.navLink}`}>
+                (PROJECTS) 
+              </Link>
+            </button>
           </li>
         </ul>
       </nav>
