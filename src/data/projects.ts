@@ -1,6 +1,7 @@
 import threejsParkour from '../assets/threejs-parkour.png';
 import restaurantFinder from '../assets/restaurant-finder.png'
 import dungeonSurvival from '../assets/dungeon-survival.png'
+import timelyText from '../assets/timely-text.jpg'
 
 export const projectsData = [
   {
@@ -25,6 +26,14 @@ export const projectsData = [
     description: "An animated 2D top-down dungeon survival game.",
     technologies: ["TypeScript", "OOP", "CSS"],
     imageUrl: dungeonSurvival,
+    repository: "https://github.com/ian-yeh/dungeon-survival-game",
+  },
+  {
+    id: 4,
+    title: "Timely Text App",
+    description: "A mobile app where you never forget to stay connected.",
+    technologies: ["React Native", "Tailwind"],
+    imageUrl: timelyText,
     repository: "https://github.com/ian-yeh/dungeon-survival-game",
   },
 ];
