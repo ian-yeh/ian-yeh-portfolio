@@ -34,7 +34,15 @@ export const projectsData = [
     description: "A mobile app where you never forget to stay connected.",
     technologies: ["React Native", "Tailwind"],
     imageUrl: timelyText,
-    repository: "https://github.com/ian-yeh/dungeon-survival-game",
+    repository: "https://github.com/ian-yeh/timely-text",
+  },
+  {
+    id: 5,
+    title: "MovieFlix",
+    description: "A mobile app made which allows users to access a database of films.",
+    technologies: ["React Native", "Tailwind"],
+    imageUrl: timelyText,
+    repository: "https://github.com/ian-yeh/movie-app",
   },
 ];
 
