@@ -30,6 +30,10 @@
   color: #555;
 }
 
+.navItem {
+  background: transparent;
+}
+
 /* Navigation link styles */
 .navList {
   list-style: none;

@@ -15,8 +15,12 @@ function Footer() {
           Made with React.js and CSS by yours truly using NeoVim.
         </div>
         <div className={styles.footerIconContainer}>
-          <IonIcon icon={logoGithub} className={styles.icon} />
-          <IonIcon icon={logoLinkedin} className={styles.icon} />
+          <a href="https://www.linkedin.com/in/ian-y-175b69319/" target="_blank">
+            <IonIcon icon={logoLinkedin} className={styles.icon} />
+          </a>
+          <a href="https://github.com/ian-yeh" target="_blank">
+            <IonIcon icon={logoGithub} className={styles.icon} />
+          </a>
         </div>
       </div>
 
