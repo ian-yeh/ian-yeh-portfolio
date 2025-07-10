@@ -13,7 +13,7 @@ const FrontPage = forwardRef<HTMLDivElement, FrontPageProps>( ({ scrollToContact
       <div className={styles.textContainer}>
         <h1 className={styles.heading}>Hello, I'm Ian Yeh.</h1>
         <p className={styles.paragraph}>
-          A current high school student
+          Engineering @ McMaster University
         </p>
         <p className={styles.paragraph}>
           I'm glad that you're here, feel free to take a look!
