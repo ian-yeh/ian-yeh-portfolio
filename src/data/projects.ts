@@ -8,7 +8,7 @@ import premailWeb from '../assets/premailWeb.png';
 export const projectsData = [
   {
     id: 1,
-    title: "PreMail (in progress)",
+    title: "Premail",
     description: "An app that allows users to sign-in and schedule emails in advance.",
     technologies: ["React", "Tailwind", "Firebase"],
     imageUrl: premailWeb,
