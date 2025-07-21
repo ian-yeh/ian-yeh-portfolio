@@ -5,7 +5,6 @@ import styles from './AboutSection.module.css';
 
 import { skills } from '../../../data/skills.ts'
 
-// importing logos
 import { 
   logoGithub, 
   logoLinkedin, 
@@ -19,7 +18,6 @@ const AboutSection = forwardRef<HTMLDivElement>(({}, ref) => {
 
   return (
     <div ref={ref} className={styles.container}>
-      {/* SECTION 2 MY TECHNOLOGIES USED: TO DO ADD BACKGROUND */}
       <div className={styles.textContainer}>
 
         <FadeInSection>
@@ -28,12 +26,14 @@ const AboutSection = forwardRef<HTMLDivElement>(({}, ref) => {
 
         <FadeInSection>
           <div className={styles.contentContainer}>
-            <p className={styles.mainText}>
-              I'm a developer who discovered my passion for technology at a young age, turning early curiosity into a commitment to creating meaningful, functional projects. Today, I focus on using code to build tools that improve lives and solve real problems, especially enjoying the intersection of thoughtful design and practical development. Every project is an opportunity to learn, grow, and contribute something useful to the world.
-            <br/>
-            <br/>
-Outside of coding, I'm passionate about sports—volleyball, basketball, frisbee, and baseball—and love spending time outdoors with friends and family. I'm continuing to build and learn with purpose, starting with small projects that help me gain the technical knowledge to eventually build anything. I'm always looking for new opportunities to collaborate, take on challenges, and use my skills to make a positive impact.
-            </p>
+            <div className={styles.mainTextContainer}>
+              <p className={styles.mainText}>
+                I'm a developer who discovered my passion for technology at a young age, turning early curiosity into a commitment to creating meaningful, functional projects. Today, I focus on using code to build tools that improve lives and solve real problems, especially enjoying the intersection of thoughtful design and practical development. Every project is an opportunity to learn, grow, and contribute something useful to the world.
+              <br/>
+              <br/>
+  Outside of coding, I'm passionate about sports—volleyball, basketball, frisbee, and baseball—and love spending time outdoors with friends and family. I'm continuing to build and learn with purpose, starting with small projects that help me gain the technical knowledge to eventually build anything. I'm always looking for new opportunities to collaborate, take on challenges, and use my skills to make a positive impact.
+              </p>
+            </div>
             <div className={styles.skills}>
               <p className={styles.skillsTitle}>SKILLS</p>
               <div className={styles.skillsContainer}>
