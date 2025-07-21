@@ -20,7 +20,7 @@
 .contentContainer {
   margin-top: 32px;
   display: grid;
-  grid-template-columns: 2fr 1fr;
+  grid-template-columns: 1fr 1fr;
   width: 100%;
 }
 .mainTextContainer {
@@ -51,8 +51,6 @@
   list-style: none;
   padding: 0;
   margin: 2rem 0;
-  max-width: 800px;
-  width: 100%;
 }
 li {
   display: flex;
