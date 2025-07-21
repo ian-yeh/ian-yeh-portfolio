@@ -29,16 +29,10 @@ const AboutSection = forwardRef<HTMLDivElement>(({}, ref) => {
         <FadeInSection>
           <div className={styles.contentContainer}>
             <p className={styles.mainText}>
-              I'm a developer who started building websites from a young age. What began as curiosity quickly turned into a deep passion for technology and creativity. Over time, that early spark grew into a commitment to creating projects that are not only functional but meaningful. Today, I’m focused on using code to build tools that improve lives, solve real problems, and make a positive impact.
+              I'm a developer who discovered my passion for technology at a young age, turning early curiosity into a commitment to creating meaningful, functional projects. Today, I focus on using code to build tools that improve lives and solve real problems, especially enjoying the intersection of thoughtful design and practical development. Every project is an opportunity to learn, grow, and contribute something useful to the world.
             <br/>
             <br/>
-I’m especially interested in the connection between thoughtful design and practical development. I enjoy bringing ideas to life, whether that means crafting user-friendly interfaces, building powerful backend systems, or experimenting with new technologies. Every project is a chance to learn, grow, and contribute something useful to the world.
-            <br/>
-            <br/>
-Outside of development, I’m also a volleyball, basketball, frisbee, and baseball player. I love getting outside and spending time with my friends and family and enjoying the simple joys of playing sports.
-            <br/>
-            <br/>
-Right now, I’m continuing to build, learn, and create with purpose. I want to create projects that matter for people who need them most. Yes, it starts small, but these little projects eventually become part of my journey to get the technical knowledge to be able to build anything in the world. I’m always looking for new opportunities to collaborate, take on challenges, and use my skills to help make the world a better place.
+Outside of coding, I'm passionate about sports—volleyball, basketball, frisbee, and baseball—and love spending time outdoors with friends and family. I'm continuing to build and learn with purpose, starting with small projects that help me gain the technical knowledge to eventually build anything. I'm always looking for new opportunities to collaborate, take on challenges, and use my skills to make a positive impact.
             </p>
             <div className={styles.skills}>
               <p className={styles.skillsTitle}>SKILLS</p>
@@ -51,7 +45,9 @@ Right now, I’m continuing to build, learn, and create with purpose. I want to 
                   ):(
                     <img src={skill.image} width="14" height="14"/>
                   )}
-                    {skill.text}
+                    <span className={styles.skillsItem}>
+                      {skill.text}
+                    </span>
                   </li> 
                 ))}
                 </ul>

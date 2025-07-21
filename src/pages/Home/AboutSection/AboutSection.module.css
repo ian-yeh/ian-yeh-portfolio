@@ -104,6 +104,10 @@ li:hover {
   margin-top: 32px;
 }
 
+.skillsItem {
+  margin-left: 8px;
+}
+
 @media screen and (max-width: 768px) {
   .container {
     width: 100%;
@@ -169,3 +173,5 @@ li:hover {
     font-size: 0.76rem;
   }
 }
+
+
