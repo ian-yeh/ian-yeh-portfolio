@@ -11,7 +11,7 @@ import {
 } from 'ionicons/icons';
 import { IonIcon } from '@ionic/react';
 
-const AboutSection = forwardRef<HTMLDivElement>(({}, ref) => {
+const AboutSection = forwardRef<HTMLDivElement>((_, ref) => {
   for (let i = 0; i < skills.length; i++) {
     console.log(skills[i].text)
   }
@@ -28,28 +28,24 @@ const AboutSection = forwardRef<HTMLDivElement>(({}, ref) => {
           <div className={styles.contentContainer}>
             <div className={styles.mainTextContainer}>
               <p className={styles.mainText}>
-                I'm a developer who discovered my passion for technology at a young age, turning early curiosity into a commitment to creating meaningful, functional projects. Today, I focus on using code to build tools that improve lives and solve real problems, especially enjoying the intersection of thoughtful design and practical development. Every project is an opportunity to learn, grow, and contribute something useful to the world.
+                I'm a self-taught full-stack engineer who is passionate about building applications that people use to make their lives easier. I care, I work hard, and I love what I do.
               <br/>
               <br/>
-  Outside of coding, I'm passionate about sports—volleyball, basketball, frisbee, and baseball—and love spending time outdoors with friends and family. I'm continuing to build and learn with purpose, starting with small projects that help me gain the technical knowledge to eventually build anything. I'm always looking for new opportunities to collaborate, take on challenges, and use my skills to make a positive impact.
+  Outside of coding, I'm passionate about sports—volleyball, basketball, frisbee, and baseball—and love spending time outdoors with friends and family. I'm continuing to build and learn with purpose, starting with small projects that help me gain the technical knowledge to eventually build anything. I'm always looking for new opportunities to collaborate, take on challenges, and use my skills to make a positive impact. Feel free to reach out!
               </p>
             </div>
             <div className={styles.skills}>
               <p className={styles.skillsTitle}>SKILLS</p>
               <div className={styles.skillsContainer}>
                 <ul className={styles.skillsList}>
-                {skills.map((skill) => (
-                  <li key={skill.id}>
-                  {skill.ionicon ? (
-                    <IonIcon icon={skill.image} size="small" />
-                  ):(
-                    <img src={skill.image} width="14" height="14"/>
-                  )}
-                    <span className={styles.skillsItem}>
-                      {skill.text}
-                    </span>
-                  </li> 
-                ))}
+                  {skills.map((skill, index) => (
+                    <li key={index}>
+                      <skill.icon className={styles.skillIcon} />
+                      <span className={styles.skillsItem}>
+                        {skill.text}
+                      </span>
+                    </li> 
+                  ))}
                 </ul>
               </div>
             </div>
