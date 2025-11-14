@@ -31,8 +31,7 @@ const AboutSection = forwardRef<HTMLDivElement>((_, ref) => {
                 I'm a self-taught full-stack engineer who is passionate about building applications that people use to make their lives easier. I care, I work hard, and I love what I do.
               <br/>
               <br/>
-                I'm doing what I do because I know that I have the ability to make the world a better place. Our world is growing increasingly digital, and being there in the golden age of technology,
-                where our education systems, politics, transit systems and workforce is online, I'm excited to build and contribute to society. Recently, I've been building tools to help real people solve real problems: tools for speedcubers to analyze their times, and AI summarization systems for your documents. I have so many ideas, and have all the time in the world to make them a reality. I'm glad you can be here for this journey! Feel free to reach out anytime.
+I'm doing what I do because I know I have the ability to make the world a better place. Our world is growing increasingly digital, and being here in the golden age of technology, where our education systems, politics, transit systems, and workforce are online, I'm excited to build and contribute to society. Recently, I've been building tools to help real people solve real problems: tools for speedcubers to analyze their times and AI summarization systems for documents. I have so many ideas and all the time in the world to make them a reality. I'm glad you can be here for this journey! Feel free to reach out anytime.
               </p>
             </div>
             <div className={styles.skills}>
